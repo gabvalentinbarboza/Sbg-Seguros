@@ -1,0 +1,18 @@
+@import url('../public/fonts.css');
+
+/* Definindo variáveis de cores */
+:root {
+    --azul-escuro: #001530;
+    --laranja: #D17F1F;
+    --cinza-fundo: #F1F0EF;
+    --azul-médio: #012044;
+    --branco: #FFFFFF;
+}
+
+/* Tipografia */
+:root {
+    --font-fira-sans-extralight: 'FiraSans-ExtraLight', sans-serif;
+    --font-fira-sans-light: 'FiraSans-Light', sans-serif;
+    --font-fira-sans-regular: 'FiraSans-Regular', sans-serif;
+}
+

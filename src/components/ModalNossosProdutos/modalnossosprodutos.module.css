@@ -1,0 +1,198 @@
+
+
+/* Definindo variáveis de cores */
+:root {
+    --azul-escuro: #001530;
+    --laranja: #D17F1F;
+    --cinza-fundo: #F1F0EF;
+    --azul-médio: #012044;
+    --branco: #FFFFFF;
+}
+
+/* Tipografia */
+:root {
+    --font-fira-sans-extralight: 'FiraSans-ExtraLight', sans-serif;
+    --font-fira-sans-light: 'FiraSans-Light', sans-serif;
+    --font-fira-sans-regular: 'FiraSans-Regular', sans-serif;
+}
+
+.modalOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    z-index: 500;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modalContainer {
+    position: relative;
+    width: 855px;
+    height: 600px;
+    background-color: var(--branco);
+    border: 5px solid var(--azul-médio);
+    padding: 40px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+
+.modalTitle {
+    font-family: var(--font-fira-sans-regular);
+    font-weight: 400;
+    font-size: 54px;
+    color: var(--azul-médio);
+    margin-bottom: 20px;
+    width: 80%;
+    padding-left: 20px;
+}
+
+
+
+.modalTopicos {
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-top: 20px;
+    width: 100%;
+    padding-left: 50px;
+    height: 90%;
+    overflow-y: auto; /* Permite scroll vertical */
+    
+    /* Estilização da barra de rolagem para Firefox */
+    scrollbar-width: thin; /* Espessura da barra de rolagem */
+    scrollbar-color: var(--azul-escuro) var(--cinza-fundo); /* Cor do thumb e da trilha */
+}
+
+.modalTopicos::-webkit-scrollbar {
+    width: 10px; /* Largura da barra de rolagem */
+}
+
+.modalTopicos::-webkit-scrollbar-track {
+    background: var(--cinza-fundo); /* Cor de fundo da trilha */
+    border-radius: 10px; /* Bordas arredondadas */
+}
+
+.modalTopicos::-webkit-scrollbar-thumb {
+    background: var(--azul-escuro); /* Cor da parte que se move */
+    border-radius: 10px; /* Bordas arredondadas */
+}
+
+.modalTopicos::-webkit-scrollbar-thumb:hover {
+    background: var(--laranja); /* Cor ao passar o mouse */
+}
+
+
+.topico {
+    font-family: var(--font-fira-sans-light);
+    font-size: 32px;
+    line-height: 1.5;
+    color: var(--laranja);
+    margin-bottom: 20px;
+    display: flex;
+    align-items: left; /* Alinha verticsalmente a bolinha e o texto */
+  
+}
+
+/* Botão de Fechar customizado com o ícone */
+.closeButton {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+
+@media (max-width: 1024px) {
+    .modalContainer {
+        width: 700px; /* Diminui a largura do modal */
+        height: 500px; /* Diminui a altura do modal */
+        padding: 30px; /* Ajusta o padding */
+    }
+
+    .modalTitle {
+        font-size: 40px; /* Reduz o tamanho da fonte do título */
+        padding-left: 15px;
+        margin-bottom: 15px;
+    }
+
+    .modalTopicos {
+        padding-left: 30px; /* Ajusta o padding lateral */
+        height: 80%; /* Reduz a altura da área dos tópicos */
+    }
+
+    .topico {
+        font-size: 24px; /* Reduz o tamanho da fonte dos tópicos */
+        margin-bottom: 15px;
+    }
+
+    .closeButton img {
+        width: 60px; /* Diminui o tamanho do ícone de fechar */
+        height: 60px;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .modalContainer {
+        width: 90%; /* O modal ocupará 90% da largura da tela */
+        height: auto; /* Permite que o modal se ajuste dinamicamente à altura */
+        padding: 20px; /* Reduz o padding para economizar espaço */
+        margin-bottom: 30px;
+    }
+
+    .modalTitle {
+        font-size: 35px; /* Tamanho da fonte reduzido, mas ainda legível */
+        padding-left: 10px;
+        margin-bottom: 10px;
+    }
+
+    @media (max-width: 768px) {
+        .modalTopicos {
+            height: 50vh; /* Ajusta a altura para 50% da altura da viewport */
+            overflow-y: auto; /* Permite o scroll apenas no eixo vertical */
+            padding-left: 20px; /* Ajusta o padding para uma melhor visualização em telas menores */
+        
+        }
+    
+        /* Mantém o estilo da barra de rolagem */
+        .modalTopicos::-webkit-scrollbar {
+            width: 8px; /* Largura da barra de rolagem um pouco menor para dispositivos móveis */
+        }
+    
+        .modalTopicos::-webkit-scrollbar-track {
+            background: var(--cinza-fundo);
+            border-radius: 8px;
+        }
+    
+        .modalTopicos::-webkit-scrollbar-thumb {
+            background: var(--azul-escuro);
+            border-radius: 8px;
+        }
+    
+        .modalTopicos::-webkit-scrollbar-thumb:hover {
+            background: var(--laranja);
+        }
+    }
+    .topico {
+        font-size: 26px; /* Reduz o tamanho da fonte para tablets */
+        margin-bottom: 10px;
+    }
+
+    .closeButton img {
+        width: 50px; /* Reduz o tamanho do ícone de fechar */
+        height: 50px;
+    }
+}
+

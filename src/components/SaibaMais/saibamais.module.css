@@ -1,0 +1,238 @@
+/* Definindo variáveis de cores */
+:root {
+    --azul-escuro: #001530;
+    --laranja: #D17F1F;
+    --cinza-fundo: #F1F0EF;
+    --azul-médio: #012044;
+    --branco: #FFFFFF;
+}
+
+:root {
+    --preto-transparente: rgba(0, 0, 0, 0.5);
+    --sombra-texto: rgba(0, 0, 0, 0.25);
+  
+}
+
+/* Tipografia */
+:root {
+    --font-fira-sans-extralight: 'FiraSans-ExtraLight', sans-serif;
+    --font-fira-sans-light: 'FiraSans-Light', sans-serif;
+    --font-fira-sans-regular: 'FiraSans-Regular', sans-serif;
+}
+
+/* saibaMaisContainer */
+.saibaMaisContainer {
+    position: relative;
+    width: 100%;
+    height: 700px;
+    background-size: cover;
+    background-position: center;
+    margin-top: 120px;
+}
+
+/* Overlay */
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 435px;
+    margin-top: 264px;
+    background: var(--preto-transparente);
+}
+
+/* Texto de excelência */
+.excellenceText {
+    position: absolute;
+    left: 60px;
+    top: 300px;
+    font-family: var(--font-fira-sans-extralight);
+    font-weight: 400;
+    font-size: 5rem;
+    line-height: 100%;
+    letter-spacing: 0.05em;
+    color: var(--branco);
+    text-shadow: 0px 3px 10px var(--sombra-texto);
+}
+
+/* Botão Saiba Mais */
+.saibaMaisButton {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 512px;
+    height: 100px;
+    left: 60px;
+    top: 443px;
+    background: linear-gradient(45deg, var(--laranja), #cfb07a, var(--laranja));
+    background-size: 200% 100%;
+    border-radius: 3px;
+    text-decoration: none;
+    padding: 18px;
+    border: 2px solid transparent;
+    transition: background-color 0.3s ease, border 0.3s ease;
+    animation: gradientShift 6s ease infinite;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.4);
+}
+
+.saibaMaisButton:hover {
+    background-color: var(--azul-médio);
+    border: 2px solid var(--branco);
+    box-shadow: 0 0 22px rgba(255, 255, 255, 0.8);
+}
+
+@keyframes gradientShift {
+    0% {
+        background-position: 0% 30%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 30%;
+    }
+}
+
+/* Texto do botão Saiba Mais */
+.saibaMaisText {
+    font-family: var(--font-fira-sans-extralight);
+    font-weight: 300;
+    font-size: 2rem;
+    line-height: 46px;
+    color: var(--branco);
+    text-align: center;
+}
+
+/* Ícone de próxima página */
+.iconImage {
+    width: 35px;
+    height: 35px;
+}
+
+@media (max-width: 1250px) {
+
+    .excellenceText{
+        font-size: 3.8rem;
+    }
+
+    .saibaMaisButton{
+        top: 390px;
+    }
+}
+/* Responsividade para Tablets */
+@media (max-width: 1024px) {
+    .saibaMaisContainer {
+        height: 600px;
+    }
+
+
+.excellenceText{
+    position: absolute;
+    left: 60px;
+    top: 300px;
+    font-family: var(--font-fira-sans-extralight);
+    font-weight: 400;
+    font-size: 3rem;
+    line-height: 100%;
+    letter-spacing: 0.05em;
+    color: var(--branco);
+    text-shadow: 0px 3px 10px var(--sombra-texto);
+}
+ 
+
+    .saibaMaisButton {
+        width: 420px;
+        height: 90px;
+        top: 400px;
+        left: 40px;
+    }
+
+    .saibaMaisText {
+        font-size: 1.9rem;
+    }
+
+    .iconImage {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+/* Responsividade para Celulares */
+@media (max-width: 768px) {
+    .saibaMaisContainer {
+        height: 500px;
+        margin-top: 300px;
+    }
+
+    .overlay{
+        top: -100px;
+        height: 450px;
+        
+    }
+
+    .excellenceText {
+        font-size: 2.7rem;
+        top: 200px;
+        left: 20px;
+    }
+
+    .saibaMaisButton {
+        width: 320px;
+        height: 80px;
+        top: 300px;
+        left: 20px;
+    }
+
+    .saibaMaisText {
+        font-size: 1.5rem;
+    }
+
+    .iconImage {
+        width: 25px;
+        height: 25px;
+    }
+}
+
+@media (max-width: 676px) {
+    .excellenceText{
+        font-size: 2.1rem;
+        margin-bottom: 50px;
+        line-height: 50px;
+    }
+}
+
+@media (max-width: 515px) {
+
+    .saibaMaisButton{
+        top: 320px;
+    }
+}
+/* Responsividade para telas menores */
+@media (max-width: 480px) {
+    .saibaMaisContainer {
+        height: 450px;
+    }
+
+    .excellenceText {
+        font-size: 2rem;
+        top: 180px;
+        left: 15px;
+    }
+
+    .saibaMaisButton {
+        width: 280px;
+        height: 70px;
+        top: 300px;
+        left: 15px;
+    }
+
+    .saibaMaisText {
+        font-size: 1.2rem;
+    }
+
+    .iconImage {
+        width: 20px;
+        height: 20px;
+    }
+}

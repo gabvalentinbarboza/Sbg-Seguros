@@ -1,0 +1,73 @@
+
+
+/* Definindo variáveis de cores */
+:root {
+    --azul-escuro: #001530;
+    --laranja: #D17F1F;
+    --cinza-fundo: #F1F0EF;
+    --azul-médio: #012044;
+    --branco: #FFFFFF;
+}
+
+/* Tipografia */
+:root {
+    --font-fira-sans-extralight: 'FiraSans-ExtraLight', sans-serif;
+    --font-fira-sans-light: 'FiraSans-Light', sans-serif;
+    --font-fira-sans-regular: 'FiraSans-Regular', sans-serif;
+}
+
+/* Reset de margin, padding e box-sizing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Container principal do componente */
+.ConhecaSbgContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    position: relative;
+    width: 100%;
+    height: 436px;
+    background: url('../../assets/ConhecaSbgImg.png') no-repeat center center/cover;
+    margin-top: 120px;
+    margin-bottom: 140px;
+}
+
+/* Sobreposição escura no fundo */
+.ConhecaSbgContainer::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1; /* Para garantir que o texto fique acima da sobreposição */
+}
+
+/* Container de texto */
+.TextContainer {
+    position: relative;
+    z-index: 2; /* Para garantir que o texto fique acima da sobreposição */
+    width: 100%;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 26, 60, 0.7); /* Mesma cor definida em 'azul-escuro' com opacidade */
+    bottom: 0;
+    padding: 35px;
+}
+
+/* Estilo do texto */
+.Text {
+    width: 80%; /* Ajuste conforme necessário */
+    font-family: var(--font-fira-sans-extralight);
+    font-style: normal;
+    font-weight: 300;
+    font-size: 3rem;
+    line-height: 69px;
+    text-align: left;
+    color: var(--branco);
+}

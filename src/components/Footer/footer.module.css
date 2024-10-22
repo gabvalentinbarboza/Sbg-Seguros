@@ -1,0 +1,135 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --azul-escuro: #001530;
+    --laranja: #D17F1F;
+    --cinza-fundo: #F1F0EF;
+    --azul-médio: #012044;
+    --branco: #FFFFFF;
+
+    /* Tipografia */
+    --font-fira-sans-extralight: 'FiraSans-ExtraLight', sans-serif;
+    --font-fira-sans-light: 'FiraSans-Light', sans-serif;
+    --font-fira-sans-regular: 'FiraSans-Regular', sans-serif;
+}
+
+.footer {
+    background-color: var(--azul-médio);
+    width: 100%;
+    height: 415px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+    flex-wrap: wrap;
+    bottom: 0;
+}
+
+.logoContainer {
+    width: 260px;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo {
+    max-width: 100%;
+    height: auto;
+}
+
+.navContainer {
+    height: 80%;
+    width: 240px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 10px;
+    text-align: left;
+    margin-top: 50px;
+}
+
+.navTitleContainer {
+    width: 100%;
+    height: auto;
+    margin-bottom: -10px;
+    display: flex;
+    align-items: flex-start;
+}
+
+.navTitle {
+    font-family: var(--font-fira-sans-light);
+    font-size: 1.8rem;
+    color: var(--branco);
+    margin-bottom: 20px;
+}
+
+.navList {
+    margin-top: 25px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 22.5px;
+}
+
+.navItem {
+    display: flex;
+    align-items: flex-start;
+    height: auto;
+    margin-bottom: 8px;
+    position: relative;
+}
+
+.navItem:hover {
+    color: var(--branco);
+}
+
+.navItem::after {
+    content: '';
+    position: absolute;
+    bottom: -12px; /* Ajustado para acompanhar o texto */
+    left: 0;
+    width: 0;
+    height: 3px;
+    background: var(--branco);
+    transition: width 0.4s ease;
+}
+
+.navItem:hover::after {
+    width: 100%; /* Barra agora será do tamanho do texto */
+}
+
+.Links {
+    font-family: var(--font-fira-sans-extralight);
+    font-size: 1.3rem;
+    color: var(--branco);
+    text-decoration: none;
+    line-height: 30px;
+}
+
+.icon {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+.rigths {
+    bottom: 0;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 45px;
+    background-color: var(--azul-escuro);
+}
+
+.rigthsPhrase {
+    font-family: var(--font-fira-sans-extralight);
+    color: var(--branco);
+}

@@ -1,0 +1,447 @@
+/* Definindo variáveis de cores */
+:root {
+    --azul-escuro: #001530;
+    --laranja: #D17F1F;
+    --cinza-fundo: #F1F0EF;
+    --azul-médio: #012044;
+    --branco: #FFFFFF;
+}
+
+/* Tipografia */
+:root {
+    --font-fira-sans-extralight: 'FiraSans-ExtraLight', sans-serif;
+    --font-fira-sans-light: 'FiraSans-Light', sans-serif;
+    --font-fira-sans-regular: 'FiraSans-Regular', sans-serif;
+}
+
+/* header.module.css */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+header {
+    width: 100%;
+    height: 136px;
+    /* Adaptado ao novo design */
+    background: var(--azul-médio);
+    /* Usando a variável de cor */
+    box-shadow: 0px 4px 7px rgba(0, 0, 0, 0.25);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    z-index: 100;
+}
+
+.logoContainer {
+    width: 261px;
+    /* Largura máxima do container */
+    height: auto;
+    /* Altura ajustada automaticamente com base no conteúdo */
+    display: flex;
+    align-items: center;
+    /* Centraliza verticalmente */
+    justify-content: flex-start;
+    /* Alinha o logo à esquerda dentro do container */
+    padding-left: 20px;
+    /* Adiciona espaçamento entre o logo e a borda esquerda */
+}
+
+.logo {
+    max-width: 100%;
+    /* Limita a largura máxima ao tamanho do container */
+    height: auto;
+    /* Ajusta a altura proporcionalmente */
+}
+
+
+.navContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 60%;
+    height: 40%;
+    margin-right: 150px;
+}
+
+.ulHeader {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    list-style: none;
+
+}
+
+.Links {
+    width: 33.33%;
+    text-decoration: none;
+    color: inherit;
+}
+
+.navItem {
+    font-family: var(--font-fira-sans-regular);
+    /* Usando a variável de fonte */
+    font-size: 1.8rem;
+    line-height: 30px;
+    color: var(--branco);
+    /* Usando a variável de cor */
+    cursor: pointer;
+    padding: 5px;
+    text-align: center;
+    text-decoration: none;
+    position: relative;
+    /* Necessário para o ::after ser posicionado relativamente ao link */
+}
+
+.navItem:hover {
+    color: var(--branco);
+    /* Cor de hover com variável */
+}
+
+.navItem::after {
+    content: '';
+    position: absolute;
+    bottom: -41px;
+    /* Posiciona a barra a 20px abaixo da palavra */
+    left: 50%;
+    width: 0;
+    /* Inicialmente a barra tem largura 0 */
+    height: 7px;
+    /* Altura da barra */
+    background: var(--branco);
+    /* Usando variável de cor branca */
+
+    transform: translateX(-50%);
+    /* Centraliza a barra horizontalmente */
+    transition: width 0.4s ease;
+    /* Suaviza a transição do tamanho da barra */
+}
+
+.navItem:hover::after {
+    width: 100%;
+    /* A barra se expande ao passar o mouse */
+}
+
+
+
+@media (max-width: 1241px) {
+    .navItem {
+        font-size: 1.2rem;
+        /* Reduz o tamanho da fonte */
+    }
+
+    .navContainer {
+        width: 70%;
+        /* Aumenta o espaçamento entre os itens */
+        margin-left: 30px;
+    }
+}
+
+@media (max-width: 1067px) {
+    .navItem {
+        font-size: 0.9rem;
+        /* Reduz o tamanho da fonte */
+    }
+
+    .navContainer {
+        width: 60%;
+        /* Aumenta o espaçamento entre os itens */
+    }
+
+    .navContainer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 70%;
+        height: 40%;
+        margin-left: 20px;
+    }
+}
+
+
+/* Ajustes para telas de 1024px ou menores */
+@media (max-width: 1024px) {
+    .header {
+        height: 120px;
+        /* Ajusta a altura do header */
+    }
+
+    .logoContainer {
+        width: auto;
+        /* Permite que a largura seja ajustada automaticamente */
+        max-width: 180px;
+        /* Reduz o tamanho máximo do logo */
+        height: auto;
+        /* Mantém a proporção do logo */
+    }
+
+    .logo {
+        width: 100%;
+        /* O logo ocupará a largura total do container */
+        height: auto;
+        /* Mantém a proporção do logo */
+    }
+
+    .navItem {
+        font-size: 0.9rem;
+        /* Reduz ainda mais o tamanho da fonte */
+    }
+
+    .navContainer {
+        width: 80%;
+        /* Aumenta o espaçamento entre os itens */
+    }
+}
+
+@media (max-width: 880px) {
+    .header {
+        padding: 0 50px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        /* Distribui igualmente os elementos */
+        align-items: center;
+    }
+
+    .logoContainer {
+        width: 160px;
+        /* Tamanho reduzido para o logo */
+        height: auto;
+    }
+
+    .navContainer {
+        width: 70%;
+        /* Ajuste a largura conforme necessário */
+        display: flex;
+        justify-content: space-between;
+        /* Distribui igualmente os links de navegação */
+        align-items: center;
+    }
+
+    .ulHeader {
+        display: flex;
+        justify-content: space-between;
+        /* Distribui os itens da lista igualmente */
+        width: 100%;
+        /* Garante que ocupe todo o espaço disponível */
+        padding: 0;
+        margin: 0;
+        list-style: none;
+    }
+
+    .navItem {
+        font-size: 1rem;
+        /* Reduz o tamanho da fonte */
+    }
+}
+
+
+
+
+
+@media (max-width: 1024px) {
+    .logoContainer {
+        width: auto;
+        /* Ajusta automaticamente a largura */
+        max-width: 180px;
+        /* Limita a largura do logo */
+        padding-left: 20px;
+        /* Mantém o espaçamento mesmo em telas menores */
+    }
+}
+
+@media (max-width: 880px) {
+    .logoContainer {
+        width: 160px;
+        /* Tamanho reduzido para o logo */
+        padding-left: 15px;
+        /* Adiciona espaçamento à esquerda */
+    }
+}
+
+/* Ajustes para telas de 768px ou menores (tamanho tablet) */
+@media (max-width: 768px) {
+    .header {
+        position: absolute;
+        flex-direction: column;
+        /* Empilha o logo e a navegação */
+        height: auto;
+        padding: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 30px;
+    }
+
+    .navContainer {
+        width: 40%;
+
+        margin: 0;
+    }
+
+    .navItem::after {
+        content: '';
+        position: absolute;
+        bottom: -25px;
+        /* Posiciona a barra a 20px abaixo da palavra */
+        left: 50%;
+        width: 0;
+        /* Inicialmente a barra tem largura 0 */
+        height: 7px;
+        /* Altura da barra */
+        background: var(--branco);
+        /* Usando variável de cor branca */
+
+        transform: translateX(-50%);
+        /* Centraliza a barra horizontalmente */
+        transition: width 0.4s ease;
+        /* Suaviza a transição do tamanho da barra */
+    }
+
+    .navContainer .ulHeader {
+        flex-direction: column;
+        /* Navegação em coluna */
+        width: 100%;
+        gap: 40px;
+    }
+
+    .logoContainer {
+        width: 300px;
+        height: auto;
+        /* Tamanho ainda menor para tablets */
+        padding: 0;
+        /* Remove o padding já que usamos margin */
+        margin-right: 70%;
+        margin-left: 25px;
+    }
+
+    .navItem {
+        font-size: 1.3rem;
+        /* Reduz o tamanho da fonte */
+    }
+
+    .logo {
+        max-width: 100%;
+        /* Limita a largura máxima ao tamanho do container */
+        height: auto;
+        /* Ajusta a altura proporcionalmente */
+        padding: 0;
+        /* Remove o padding já que usamos margin */
+        margin: 0;
+
+    }
+}
+
+
+/* Icones */
+.icon {
+    display: none;
+    /* Ocultado por padrão */
+    cursor: pointer;
+    width: 35px;
+    /* Tamanho do ícone */
+    height: 35px;
+    z-index: 200;
+    /* Garantir que fique acima do menu */
+}
+
+.menuIcon {
+    width: 35px;
+    /* Definindo o tamanho do ícone */
+    height: 35px;
+    position: absolute;
+    /* Permite ajustar a posição */
+    top: 20px;
+    right: 20px;
+}
+
+@media (max-width: 480px) {
+    .header {
+        height: 370px;
+    }
+
+    .navContainer {
+        display: none;
+        /* Ocultar menu inicialmente */
+        flex-direction: column;
+        position: absolute;
+        margin-left: 25%;
+        top: 105px;
+        left: 0;
+        width: 50%;
+
+        z-index: 100;
+        text-align: center;
+        height: 70%;
+    }
+
+
+    .navContainer.active {
+        display: flex;
+        /* Mostrar menu quando ativo */
+    }
+
+    .icon {
+        display: block;
+        /* Força o ícone a ser mostrado em 480px */
+        cursor: pointer;
+        z-index: 200;
+        /* Mantém o ícone acima de outros elementos */
+        position: absolute;
+        top: 40px;
+        right: 40px;
+        width: 35px;
+        height: 35px;
+    }
+
+    .menuIcon {
+        width: 35px;
+        /* Definindo o tamanho do ícone */
+        height: 35px;
+    }
+
+    .ulHeader {
+        flex-direction: column;
+        padding: 10px 0;
+    }
+
+    .navItem {
+        padding: 10px 0;
+        font-size: 1.2rem;
+        /* Tamanho da fonte ajustado */
+    }
+
+    .navItem::after {
+        bottom: -15px;
+    }
+
+    .logoContainer {
+        width: auto;
+        /* Deixe a largura automática */
+        padding-left: 0;
+        /* Remova o espaçamento à esquerda */
+        justify-content: flex-start;
+        /* Certifique-se de que o logo seja alinhado à esquerda */
+        position: absolute;
+        /* Posicione o logo de forma absoluta dentro do header */
+        top: 20px;
+        /* Defina a posição no topo */
+        left: 10px;
+        /* Defina a posição à esquerda */
+    }
+
+    .logo {
+        width: 140px;
+        /* Ajuste a largura do logo conforme necessário */
+        height: auto;
+        /* Mantém a proporção da altura */
+    }
+
+}
+

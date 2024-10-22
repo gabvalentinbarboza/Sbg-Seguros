@@ -1,0 +1,74 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Definindo variáveis de cores */
+:root {
+    --azul-escuro: #001530;
+    --laranja: #D17F1F;
+    --cinza-fundo: #F1F0EF;
+    --azul-médio: #012044;
+    --branco: #FFFFFF;
+}
+
+/* Tipografia */
+:root {
+    --font-fira-sans-extralight: 'FiraSans-ExtraLight', sans-serif;
+    --font-fira-sans-light: 'FiraSans-Light', sans-serif;
+    --font-fira-sans-regular: 'FiraSans-Regular', sans-serif;
+}
+
+/* Contêiner principal */
+.MissaoVisaoValoresContainer {
+    width: 100%; /* Largura total da seção */
+    height: 1430px; /* Defina a altura desejada */
+    padding: 40px;
+    background-color: var(--branco); /* Cor de fundo para o contêiner */
+    display: flex;
+  justify-content: center;
+
+}
+
+/* Contêiner de texto */
+.TextContainer {
+    height: 90%;
+    display: flex;
+    flex-direction: column; /* Para empilhar os itens */
+    align-items: center; /* Alinha os itens à esquerda */
+    width: 50%;
+}
+
+/* Contêiner de cada item */
+.ItemContainer {
+    margin-bottom: 40px; /* Espaçamento entre os itens */
+    display: flex;
+    flex-direction: column;
+   text-align: center;
+}
+
+/* Título */
+.Title {
+    font-family: var(--font-fira-sans-light); /* Usando a fonte definida */
+    font-weight: 275;
+    font-size: 3rem;
+    line-height: 74px;
+    color: var(--azul-médio); /* Cor do título usando a variável do root */
+    margin-bottom: 30px;
+
+    
+    /* Estilo para a linha sublinhando o título */
+    border-bottom: 10px solid var(--laranja); /* Ajuste a espessura conforme necessário */
+    padding-bottom: 1px; /* Adiciona um pouco de espaço entre o texto e a linha */
+    margin-bottom: 35px;
+}
+
+/* Texto */
+.Text {
+    font-family: var(--font-fira-sans-regular); /* Usando a fonte definida */
+    font-weight: 400;
+    font-size: 2.5rem;
+    line-height: 45px;
+    color: var(--azul-escuro); /* Cor do texto usando a variável do root */
+}

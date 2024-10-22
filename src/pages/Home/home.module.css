@@ -1,0 +1,48 @@
+
+
+/* Definindo variáveis de cores */
+:root {
+    --azul-escuro: #001530;
+    --laranja: #D17F1F;
+    --cinza-fundo: #F1F0EF;
+    --azul-médio: #012044;
+    --branco: #FFFFFF;
+}
+
+/* Tipografia */
+:root {
+    --font-fira-sans-extralight: 'FiraSans-ExtraLight', sans-serif;
+    --font-fira-sans-light: 'FiraSans-Light', sans-serif;
+    --font-fira-sans-regular: 'FiraSans-Regular', sans-serif;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: var(--font-fira-sans-extralight), sans-serif;
+    background-color: var(--azul-escuro);
+    min-height: 100vh;
+  }
+  
+  div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  /* Certifique-se de que o Header e Footer tenham espaçamento */
+  header, footer {
+    width: 100%;
+  }
+  
+  /* Ajuste o conteúdo principal para preencher o espaço entre Header e Footer */
+  main {
+    flex: 1;
+    width: 100%;
+  }

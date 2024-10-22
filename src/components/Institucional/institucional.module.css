@@ -1,0 +1,80 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Definindo variáveis de cores */
+:root {
+    --azul-escuro: #001530;
+    --laranja: #D17F1F;
+    --cinza-fundo: #F1F0EF;
+    --azul-médio: #012044;
+    --branco: #FFFFFF;
+}
+
+/* Tipografia */
+:root {
+    --font-fira-sans-extralight: 'FiraSans-ExtraLight', sans-serif;
+    --font-fira-sans-light: 'FiraSans-Light', sans-serif;
+    --font-fira-sans-regular: 'FiraSans-Regular', sans-serif;
+}
+
+/* Institucional Container */
+.InstitucionalContainer {
+    display: flex; /* Ativa o layout flex */
+    align-items: flex-start; /* Alinha itens no topo */
+    padding: 40px;
+    background-color: var(--azul-escuro);
+}
+
+/* Artigo Container */
+.ArtigoContainer {
+    width: 50%;
+    flex: 1; /* Permite que o artigo ocupe o espaço disponível */
+    padding-right: 20px; /* Espaçamento à direita entre o texto e a imagem */
+}
+
+/* Título */
+.TitleContainer {
+    margin-bottom: 40px;
+    width: 100%;
+    height: 90px; /* Ajusta a altura automaticamente */
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start; /* Alinha o conteúdo à esquerda */
+}
+
+.Title {
+    font-family: var(--font-fira-sans-extralight);
+    font-size: 80px; /* Tamanho do título */
+    line-height: 97px; /* Altura da linha */
+    color: var(--laranja); /* Cor do título */
+}
+
+/* Fases Container */
+.PhasesContainer {
+    margin-bottom: 40px; /* Espaço abaixo do conteúdo */
+}
+
+/* Fase */
+.Phase {
+    font-family: var(--font-fira-sans-regular);
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 38px;
+    color: #FFFFFF; /* Cor do texto */
+    margin-bottom: 20px; /* Espaçamento entre os parágrafos */
+}
+
+/* Foto Simone Container */
+.FotoSimoneContainer {
+    flex: 0 0 508px; /* Largura fixa da imagem */
+}
+
+.FotoSimone {
+    width: 100%; /* Garante que a imagem ocupe todo o contêiner */
+    height: auto; /* Mantém a proporção da imagem */
+    object-fit: cover;
+}

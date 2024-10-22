@@ -1,0 +1,221 @@
+/* Reset de margens e preenchimento */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Adicionado para melhor controle de dimensionamento */
+}
+
+/* Definindo variáveis de cores e tipografia */
+:root {
+    --azul-escuro: #001530;
+    --laranja: #D17F1F;
+    --cinza-fundo: #F1F0EF;
+    --branco: #FFFFFF;
+    --font-fira-sans-regular: 'FiraSans-Regular', sans-serif;
+}
+
+:root {
+    --font-fira-sans-extralight: 'FiraSans-ExtraLight', sans-serif;
+    --font-fira-sans-light: 'FiraSans-Light', sans-serif;
+    --font-fira-sans-regular: 'FiraSans-Regular', sans-serif;
+}
+
+
+/* Estilos do container Fale Conosco */
+.FaleConoscoContainer {
+    width: 40%; /* Para responsividade */
+    max-width: 1440px; /* Limita a largura máxima */
+margin-left: 55%;
+    padding: 40px; /* Aumentando o padding para dar espaço */
+    color: var(--branco);
+    margin-bottom: 50px;
+    margin-top: 130px;
+}
+
+
+
+/* Estilo do título Fale Conosco */
+.FaleConoscoTitulo {
+    font-family: var(--font-fira-sans-extralight);
+    font-size: 2.5rem;
+    margin-bottom: 20px; /* Espaço abaixo do título */
+    width: 100%;
+    z-index: 10;
+}
+
+/* Estilos do formulário */
+.forms {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Espaço entre os elementos do formulário */
+}
+
+/* Estilos das labels */
+.label {
+    font-family: var(--font-fira-sans-extralight);
+    font-size: 1.4rem;
+    color: var(--branco);
+}
+
+/* Estilos de input e textarea */
+input,
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--azul-escuro);
+    border: solid 2px var(--branco);
+    border-radius: 0;
+    color: var(--branco);
+    font-family: var(--font-fira-sans-regular);
+    font-size: 1.2rem;
+}
+
+/* Estilos do textarea */
+textarea {
+    height: 141px; /* Altura da caixa de mensagem */
+    resize: none; /* Desabilitar redimensionamento */
+
+}
+
+/* Estilos do botão */
+.buttom_solicitar {
+
+    color: var(--branco);
+    font-family: var(--font-fira-sans-extralight);
+    font-size: 1.5rem;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    transition: opacity 0.3s; /* Adiciona transição ao botão */
+    width: 200px;
+
+    transition: background-color 0.3s ease, border 0.3s ease;
+    animation: gradientShift 6s ease infinite;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.4);
+
+    background: linear-gradient(45deg, var(--laranja), #cfb07a, var(--laranja));
+    background-size: 200% 100%;
+
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.4);
+}
+
+.buttom_solicitar:hover {
+    
+        background-color: var(--azul-médio);
+        border: 1px solid var(--branco);
+        box-shadow: 0 0 22px rgba(255, 255, 255, 0.8);
+  
+}
+
+@keyframes gradientShift {
+    0% {
+        background-position: 0% 30%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 30%;
+    }
+}
+
+
+/* Ajustes a partir de 1024px */
+@media (max-width: 1024px) {
+    .FaleConoscoContainer {
+        width: 60%; /* Aumenta o tamanho do container */
+        margin-left: 0; /* Alinha o bloco à esquerda */
+        padding: 20px; /* Ajusta o padding */
+        margin-top: 120px; /* Ajusta a margem superior */
+    }
+
+    .FaleConoscoTitulo {
+        font-size: 2.2rem; /* Reduz ligeiramente o tamanho da fonte */
+    }
+
+    input,
+    textarea {
+        font-size: 1.1rem; /* Diminui um pouco o tamanho da fonte */
+    }
+
+    .buttom_solicitar {
+        font-size: 1.4rem;
+        width: 180px;
+    }
+}
+
+/* Ajustes para 880px */
+@media (max-width: 880px) {
+    .FaleConoscoContainer {
+        width: 80%; /* O container ocupa mais espaço na tela */
+        margin-left: 0; /* Mantém o bloco alinhado à esquerda */
+        padding: 20px;
+        margin-top: 140px;
+    }
+
+    .FaleConoscoTitulo {
+        font-size: 2rem; /* Ajuste no tamanho do título */
+    }
+
+    input,
+    textarea {
+        font-size: 1rem; /* Reduz o tamanho do texto para manter a legibilidade */
+    }
+
+    .buttom_solicitar {
+        font-size: 1.3rem;
+        width: 160px;
+    }
+}
+
+/* Ajustes para 768px */
+@media (max-width: 768px) {
+    .FaleConoscoContainer {
+        width: 90%; /* O container ocupa quase toda a largura da tela */
+        margin-left: 0;
+        padding: 15px;
+        margin-top: 400px;
+    }
+
+    .FaleConoscoTitulo {
+        font-size: 1.8rem; /* Ajusta o tamanho da fonte do título */
+    }
+
+    input,
+    textarea {
+        font-size: 0.95rem; /* Reduz o tamanho da fonte */
+    }
+
+    .buttom_solicitar {
+        font-size: 1.2rem;
+        width: 150px;
+    }
+}
+
+/* Ajustes para 480px */
+@media (max-width: 480px) {
+    .FaleConoscoContainer {
+        width: 100%; /* O container ocupa toda a largura */
+        margin-left: 0;
+        padding: 10px;
+        margin-top: 400px;
+    }
+
+    .FaleConoscoTitulo {
+        font-size: 1.5rem; /* Reduz o tamanho do título */
+    }
+
+    input,
+    textarea {
+        font-size: 0.9rem; /* Reduz o tamanho da fonte */
+    }
+
+    .buttom_solicitar {
+        font-size: 1rem;
+        width: 140px;
+    }
+}
