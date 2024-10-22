@@ -78,6 +78,7 @@
 }
 
 .navItem {
+    width: auto;
     display: flex;
     align-items: flex-start;
     height: auto;
@@ -132,4 +133,150 @@
 .rigthsPhrase {
     font-family: var(--font-fira-sans-extralight);
     color: var(--branco);
+}
+
+
+@media (max-width: 1130px) 
+
+{
+
+.navContainer{
+width: 200px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.logoContainer{
+ width: 150px;
+ margin-bottom: 200px;
+ margin-right: 40px;
+ margin-left: 10px;
+ padding-left: 20px;
+}
+
+}
+
+
+@media (max-width: 936px) {
+
+    .navContainer{
+        width: 170px;
+    }
+
+    .Links{
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 848px) {
+
+    .navContainer{
+
+        margin-left: -20px;
+        margin-right: -20px;
+    }
+
+    .logoContainer{
+
+        margin-right: -20px;
+        margin-left: -25px;
+    }
+}
+
+@media (max-width: 750px) {
+
+ .navList{
+    gap: 12px;
+ }
+
+ .logoContainer{
+    width: 170px;
+    padding-right: 25px;
+ }
+}
+
+@media (max-width: 700px) {
+
+    .footer {
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    .logoContainer {
+        width: 70%;
+        margin-bottom: 30px;
+        display: flex;
+        justify-content: center;
+      
+    }
+
+    .Links{
+        font-size: 2rem;
+        margin-bottom: 25px;
+    }
+    .navContainer {
+        height: 350px;
+        width: 50%;
+        margin-bottom: 60px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        border-bottom: 15px solid var(--branco);
+        
+    
+    }
+
+    .rigths {
+        margin-top: 30px;
+        position: relative;
+        bottom: 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    .navItem::after{
+        bottom: 5px; /* Ajustado para acompanhar o texto */
+    }
+
+    .navTitle{
+
+        font-size: 3rem;
+    }
+}
+
+
+@media (max-width: 520px) {
+
+    .navContainer {
+        width: 60%;
+        height: auto;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .navTitle {
+        font-size: 2.5rem;
+    }
+
+    .Links {
+        font-size: 1.5rem;
+        line-height: 25px;
+    }
+
+    .icon {
+        width: 25px;
+        height: 25px;
+    }
+
+    .navItem {
+        margin-bottom: 15px;
+    }
+
+    .rigthsPhrase {
+        font-size: 1rem;
+    }
 }

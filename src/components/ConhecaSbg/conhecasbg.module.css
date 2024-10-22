@@ -71,3 +71,57 @@
     text-align: left;
     color: var(--branco);
 }
+
+@media (max-width: 1306px) {
+
+    .Text{
+        font-size: 2.7rem;
+    }
+}
+
+@media (max-width: 1184px) {
+
+    .Text{
+        font-size: 2.4rem;
+    }
+}
+
+@media (max-width: 1054px) {
+
+    .Text{
+        font-size: 2rem;
+        line-height: 50px;
+    }
+}
+
+@media (max-width: 900px) {
+
+    .Text{
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 818px) {
+
+    .Text{
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .ConhecaSbgContainer{
+        margin-top: 370px;
+    }
+}
+
+@media (max-width: 696px) {
+
+    .Text{
+        font-size: 1.4rem;
+    }
+
+    .TextContainer{
+        
+        padding: 0;
+    }
+}
