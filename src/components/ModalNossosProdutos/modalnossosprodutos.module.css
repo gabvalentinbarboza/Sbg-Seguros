@@ -1,5 +1,3 @@
-
-
 /* Definindo variáveis de cores */
 :root {
     --azul-escuro: #001530;
@@ -41,7 +39,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-  }
+}
 
 
 .modalTitle {
@@ -57,7 +55,7 @@
 
 
 .modalTopicos {
-    
+
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -66,29 +64,38 @@
     width: 100%;
     padding-left: 50px;
     height: 90%;
-    overflow-y: auto; /* Permite scroll vertical */
-    
+    overflow-y: auto;
+    /* Permite scroll vertical */
+
     /* Estilização da barra de rolagem para Firefox */
-    scrollbar-width: thin; /* Espessura da barra de rolagem */
-    scrollbar-color: var(--azul-escuro) var(--cinza-fundo); /* Cor do thumb e da trilha */
+    scrollbar-width: thin;
+    /* Espessura da barra de rolagem */
+    scrollbar-color: var(--azul-escuro) var(--cinza-fundo);
+    /* Cor do thumb e da trilha */
 }
 
 .modalTopicos::-webkit-scrollbar {
-    width: 10px; /* Largura da barra de rolagem */
+    width: 10px;
+    /* Largura da barra de rolagem */
 }
 
 .modalTopicos::-webkit-scrollbar-track {
-    background: var(--cinza-fundo); /* Cor de fundo da trilha */
-    border-radius: 10px; /* Bordas arredondadas */
+    background: var(--cinza-fundo);
+    /* Cor de fundo da trilha */
+    border-radius: 10px;
+    /* Bordas arredondadas */
 }
 
 .modalTopicos::-webkit-scrollbar-thumb {
-    background: var(--azul-escuro); /* Cor da parte que se move */
-    border-radius: 10px; /* Bordas arredondadas */
+    background: var(--azul-escuro);
+    /* Cor da parte que se move */
+    border-radius: 10px;
+    /* Bordas arredondadas */
 }
 
 .modalTopicos::-webkit-scrollbar-thumb:hover {
-    background: var(--laranja); /* Cor ao passar o mouse */
+    background: var(--laranja);
+    /* Cor ao passar o mouse */
 }
 
 
@@ -99,8 +106,9 @@
     color: var(--laranja);
     margin-bottom: 20px;
     display: flex;
-    align-items: left; /* Alinha verticsalmente a bolinha e o texto */
-  
+    align-items: left;
+    /* Alinha verticsalmente a bolinha e o texto */
+
 }
 
 /* Botão de Fechar customizado com o ícone */
@@ -116,29 +124,37 @@
 
 @media (max-width: 1024px) {
     .modalContainer {
-        width: 700px; /* Diminui a largura do modal */
-        height: 500px; /* Diminui a altura do modal */
-        padding: 30px; /* Ajusta o padding */
+        width: 700px;
+        /* Diminui a largura do modal */
+        height: 500px;
+        /* Diminui a altura do modal */
+        padding: 30px;
+        /* Ajusta o padding */
     }
 
     .modalTitle {
-        font-size: 40px; /* Reduz o tamanho da fonte do título */
+        font-size: 40px;
+        /* Reduz o tamanho da fonte do título */
         padding-left: 15px;
         margin-bottom: 15px;
     }
 
     .modalTopicos {
-        padding-left: 30px; /* Ajusta o padding lateral */
-        height: 80%; /* Reduz a altura da área dos tópicos */
+        padding-left: 30px;
+        /* Ajusta o padding lateral */
+        height: 80%;
+        /* Reduz a altura da área dos tópicos */
     }
 
     .topico {
-        font-size: 24px; /* Reduz o tamanho da fonte dos tópicos */
+        font-size: 24px;
+        /* Reduz o tamanho da fonte dos tópicos */
         margin-bottom: 15px;
     }
 
     .closeButton img {
-        width: 60px; /* Diminui o tamanho do ícone de fechar */
+        width: 60px;
+        /* Diminui o tamanho do ícone de fechar */
         height: 60px;
     }
 }
@@ -146,53 +162,148 @@
 
 @media (max-width: 768px) {
     .modalContainer {
-        width: 90%; /* O modal ocupará 90% da largura da tela */
-        height: auto; /* Permite que o modal se ajuste dinamicamente à altura */
-        padding: 20px; /* Reduz o padding para economizar espaço */
+        width: 90%;
+        /* O modal ocupará 90% da largura da tela */
+        height: auto;
+        /* Permite que o modal se ajuste dinamicamente à altura */
+        padding: 20px;
+        /* Reduz o padding para economizar espaço */
         margin-bottom: 30px;
     }
 
     .modalTitle {
-        font-size: 35px; /* Tamanho da fonte reduzido, mas ainda legível */
+        font-size: 35px;
+        /* Tamanho da fonte reduzido, mas ainda legível */
         padding-left: 10px;
         margin-bottom: 10px;
     }
 
     @media (max-width: 768px) {
         .modalTopicos {
-            height: 50vh; /* Ajusta a altura para 50% da altura da viewport */
-            overflow-y: auto; /* Permite o scroll apenas no eixo vertical */
-            padding-left: 20px; /* Ajusta o padding para uma melhor visualização em telas menores */
-        
+            height: 50vh;
+            /* Ajusta a altura para 50% da altura da viewport */
+            overflow-y: auto;
+            /* Permite o scroll apenas no eixo vertical */
+            padding-left: 20px;
+            /* Ajusta o padding para uma melhor visualização em telas menores */
+
         }
-    
+
         /* Mantém o estilo da barra de rolagem */
         .modalTopicos::-webkit-scrollbar {
-            width: 8px; /* Largura da barra de rolagem um pouco menor para dispositivos móveis */
+            width: 8px;
+            /* Largura da barra de rolagem um pouco menor para dispositivos móveis */
         }
-    
+
         .modalTopicos::-webkit-scrollbar-track {
             background: var(--cinza-fundo);
             border-radius: 8px;
         }
-    
+
         .modalTopicos::-webkit-scrollbar-thumb {
             background: var(--azul-escuro);
             border-radius: 8px;
         }
-    
+
         .modalTopicos::-webkit-scrollbar-thumb:hover {
             background: var(--laranja);
         }
     }
+
     .topico {
-        font-size: 26px; /* Reduz o tamanho da fonte para tablets */
+        font-size: 26px;
+        /* Reduz o tamanho da fonte para tablets */
         margin-bottom: 10px;
     }
 
     .closeButton img {
-        width: 50px; /* Reduz o tamanho do ícone de fechar */
+        width: 50px;
+        /* Reduz o tamanho do ícone de fechar */
         height: 50px;
     }
 }
 
+
+@media (max-width: 707px) {
+    .modalContainer {
+        width: 85%; /* Ocupa 85% da largura da tela */
+        height: 450px; /* Define uma altura menor */
+        padding: 15px; /* Reduz o padding */
+     
+    }
+
+   
+
+    .modalTopicos {
+       
+        height: 80%; /* Reduz a altura dos tópicos */
+        padding-left: 15px;
+        overflow-y: auto; /* Permite scroll vertical */
+    }
+
+    .topico {
+        font-size: 22px; /* Reduz o tamanho dos textos */
+        margin-bottom: 10px;
+    }
+
+    .closeButton img {
+        width: 45px; /* Diminui o ícone de fechar */
+        height: 45px;
+    }
+}
+
+@media (max-width: 650px) {
+    .modalContainer {
+        width: 80%; /* O modal ocupa 90% da largura da tela */
+        height: auto; /* Ajusta dinamicamente a altura */
+        padding: 10px; /* Reduz o padding para economizar espaço */
+        margin-bottom: 20px;
+        justify-content: flex-start; /* Mantém o conteúdo próximo ao topo */
+    }
+
+    .modalTitle {
+        font-size: 30px; /* Tamanho da fonte para telas menores */
+        margin-bottom: 10px;
+        padding-left: 10px;
+    }
+
+    .modalTopicos {
+        height: 60vh; /* Define 60% da altura da viewport */
+        margin-top: 45px; /* Aproxima os tópicos do título */
+        padding-left: 10px; /* Ajusta o padding lateral */
+        overflow-y: auto; /* Permite rolagem vertical */
+        margin-bottom: -45px;
+    }
+
+    .topico {
+        font-size: 20px; /* Ajusta o tamanho da fonte */
+        margin-bottom: 8px;
+    }
+
+    .closeButton img {
+        width: 40px; /* Reduz o tamanho do ícone de fechar */
+        height: 40px;
+    }
+}
+
+
+@media (max-width: 580px) 
+
+{
+    .topico
+    {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 524px) 
+{
+    .modalContainer
+    {
+        width: 90%;
+    }
+    .topico
+    {
+        font-size: 17px;
+    }
+}
