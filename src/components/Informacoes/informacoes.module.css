@@ -1,5 +1,111 @@
-*{
+/* Variáveis de cor e fonte */
+:root {
+    --azul-escuro: #001530;
+    --laranja: #D17F1F;
+    --cinza-fundo: #F1F0EF;
+    --azul-médio: #012044;
+    --branco: #FFFFFF;
+
+    --font-fira-sans-extralight: 'FiraSans-ExtraLight', sans-serif;
+    --font-fira-sans-light: 'FiraSans-Light', sans-serif;
+    --font-fira-sans-regular: 'FiraSans-Regular', sans-serif;
+}
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+.InformacoesContainer {
+    width: 250%;
+    padding: 20px;
+    margin-left: 150%;
+    margin-right: -290px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    align-items: flex-start;
+}
+
+/* Grupos */
+.contactGroup,
+.socialGroup,
+.officeGroup {
+    width: 150%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Títulos */
+.contactTitle,
+.socialTitle,
+.officeTitle {
+    font-size: 3rem;
+    color: var(--laranja);
+    margin-bottom: 10px;
+    font-family: var(--font-fira-sans-light);
+    width: 100%;
+}
+
+/* Listas */
+.contactList,
+.socialList,
+.officeList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+}
+
+/* Itens */
+.contactItem,
+.socialItem,
+.officeItem {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+/* Links */
+.contactLink,
+.socialLink,
+.officeLink {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    font-size: 1.7rem;
+    color: var(--branco);
+    transition: color 0.3s ease;
+    width: auto;
+    z-index: 1;
+    
+}
+
+/* Hover no texto */
+.contactLink:hover span,
+.socialLink:hover span,
+.officeLink:hover span {
+    color: var(--laranja);
+}
+
+/* Ícones */
+.contactIcon,
+.socialIcon,
+.officeIcon {
+    width: 30px;
+    height: 30px;
+}
+
+/* Texto */
+.contactText,
+.socialText,
+.officeText {
+    font-family: var(--font-fira-sans-light);
+    color: inherit; /* Herda a cor do link */
 }

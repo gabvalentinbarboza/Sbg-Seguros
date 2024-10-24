@@ -24,12 +24,13 @@
 /* Estilos do container Fale Conosco */
 .FaleConoscoContainer {
     width: 40%; /* Para responsividade */
-    max-width: 1440px; /* Limita a largura máxima */
+    max-width: 100%; /* Limita a largura máxima */
 margin-left: 55%;
     padding: 40px; /* Aumentando o padding para dar espaço */
     color: var(--branco);
     margin-bottom: 50px;
     margin-top: 130px;
+    z-index: 15;
 }
 
 
