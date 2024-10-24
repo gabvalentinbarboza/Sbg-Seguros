@@ -64,7 +64,8 @@ function Footer() {
                     <li className={Styles.navItem}>
                         <img src={AddressIcon} alt="Endereço" className={Styles.icon} />
                         <a href="https://maps.app.goo.gl/MzvgmXKc5Vcyr36c6" className={Styles.Links}>
-                            Rua Fernando Falcao, 1111 CJ 1203 Mooca - 03180-003 São Paulo - SP
+                        Rua Bom Sucesso, 220  - Tatuapé - Edifício Platina 220 - 03305-000 - SP
+
                         </a>
                     </li>
                 </ul>

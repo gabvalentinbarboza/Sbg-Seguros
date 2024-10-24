@@ -22,8 +22,10 @@
 
 /* Institucional Container */
 .InstitucionalContainer {
-    display: flex; /* Ativa o layout flex */
-    align-items: flex-start; /* Alinha itens no topo */
+    display: flex;
+    /* Ativa o layout flex */
+    align-items: flex-start;
+    /* Alinha itens no topo */
     padding: 40px;
     background-color: var(--azul-escuro);
 }
@@ -31,31 +33,39 @@
 /* Artigo Container */
 .ArtigoContainer {
     width: 50%;
-    flex: 1; /* Permite que o artigo ocupe o espaço disponível */
-    padding-right: 20px; /* Espaçamento à direita entre o texto e a imagem */
+    flex: 1;
+    /* Permite que o artigo ocupe o espaço disponível */
+    padding-right: 20px;
+    /* Espaçamento à direita entre o texto e a imagem */
 }
 
 /* Título */
 .TitleContainer {
     margin-bottom: 40px;
     width: 100%;
-    height: 90px; /* Ajusta a altura automaticamente */
+    height: 90px;
+    /* Ajusta a altura automaticamente */
     display: flex;
     flex-direction: row;
     align-items: flex-start;
-    justify-content: flex-start; /* Alinha o conteúdo à esquerda */
+    justify-content: flex-start;
+    /* Alinha o conteúdo à esquerda */
 }
 
 .Title {
     font-family: var(--font-fira-sans-extralight);
-    font-size: 80px; /* Tamanho do título */
-    line-height: 97px; /* Altura da linha */
-    color: var(--laranja); /* Cor do título */
+    font-size: 80px;
+    /* Tamanho do título */
+    line-height: 97px;
+    /* Altura da linha */
+    color: var(--laranja);
+    /* Cor do título */
 }
 
 /* Fases Container */
 .PhasesContainer {
-    margin-bottom: 40px; /* Espaço abaixo do conteúdo */
+    margin-bottom: 40px;
+    /* Espaço abaixo do conteúdo */
 }
 
 /* Fase */
@@ -64,17 +74,162 @@
     font-weight: 400;
     font-size: 32px;
     line-height: 38px;
-    color: #FFFFFF; /* Cor do texto */
-    margin-bottom: 20px; /* Espaçamento entre os parágrafos */
+    color: #FFFFFF;
+    /* Cor do texto */
+    margin-bottom: 20px;
+    /* Espaçamento entre os parágrafos */
 }
 
 /* Foto Simone Container */
+
+
 .FotoSimoneContainer {
-    flex: 0 0 508px; /* Largura fixa da imagem */
+    flex: 1;
+    max-width: 508px;
+    /* Largura máxima */
+    width: 100%;
+    height: auto;
+    /* Altura automática */
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .FotoSimone {
-    width: 100%; /* Garante que a imagem ocupe todo o contêiner */
-    height: auto; /* Mantém a proporção da imagem */
-    object-fit: cover;
+    border-radius: 15px;
 }
+
+@media (max-width: 1510px) {
+    .Title {
+
+        font-size: 3.3rem;
+    }
+
+    .Phase {
+
+        font-size: 1.8rem;
+        margin-bottom: -20px;
+    }
+
+
+    .FotoSimoneContainer {
+        max-width: 500px;
+        /* Largura máxima menor */
+    }
+
+    .FotoSimone {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+
+
+    .ArtigoContainer {
+        width: 500px;
+        flex: 1;
+        /* Permite que o artigo ocupe o espaço disponível */
+        padding-right: 100px;
+        /* Espaçamento à direita entre o texto e a imagem */
+
+
+    }
+
+}
+
+@media (max-width: 1220px) {
+    .InstitucionalContainer {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: flex-start;
+
+
+        padding: 25px;
+    }
+
+    .ArtigoContainer {
+        width: 40%;
+        padding-top: 0;
+
+        padding-left: 45px;
+    }
+
+    .FotoSimoneContainer {
+        width: 800px;
+    }
+}
+
+@media (max-width: 1075px) {
+    .Title {
+
+        font-size: 3rem;
+    }
+
+    .Phase {
+
+        font-size: 1.2rem;
+        margin-bottom: -10px;
+    }
+}
+
+@media (max-width: 830px) {
+    .InstitucionalContainer {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    .ArtigoContainer {
+        margin-top: 30px;
+        width: 80%;
+
+    }
+
+    .Title {
+        font-size: 3.2rem;
+    }
+
+    .Phase {
+        font-size: 1.7rem;
+    }
+}
+
+@media (max-width: 695px) 
+
+{
+
+    .ArtigoContainer
+    {
+        width: 100%;
+       
+    }
+ 
+}
+
+@media (max-width: 545px) 
+
+{
+
+  .ArtigoContainer
+  {
+    width: 90%;
+    padding: 0;
+  }
+
+    .Phase {
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 600px) 
+
+{
+    
+    
+        .FotoSimoneContainer {
+            max-width: 400px;
+            /* Largura máxima menor */
+        }
+    
+}
+
+

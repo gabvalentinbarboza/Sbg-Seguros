@@ -31,9 +31,9 @@
     position: relative;
     width: 100%;
     height: 436px;
-    background: url('../../assets/ConhecaSbgImg.png') no-repeat center center/cover;
-    margin-top: 120px;
-    margin-bottom: 140px;
+    background: url('../../assets/ConhecaSbgFundo.jpg') no-repeat center center/cover;
+    margin-top: 130px;
+    margin-bottom: 340px;
 }
 
 /* Sobreposição escura no fundo */
@@ -55,8 +55,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgba(0, 26, 60, 0.7); /* Mesma cor definida em 'azul-escuro' com opacidade */
-    bottom: 0;
+    background-color: rgba(0, 26, 60, 0.4); /* Mesma cor definida em 'azul-escuro' com opacidade */
+    bottom: -300px;
     padding: 35px;
 }
 

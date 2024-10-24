@@ -22,53 +22,168 @@
 
 /* Contêiner principal */
 .MissaoVisaoValoresContainer {
-    width: 100%; /* Largura total da seção */
-    height: 1430px; /* Defina a altura desejada */
+    width: 100%;
+    /* Largura total da seção */
+    height: 1430px;
+    /* Defina a altura desejada */
     padding: 40px;
-    background-color: var(--branco); /* Cor de fundo para o contêiner */
+    background-color: var(--branco);
+    /* Cor de fundo para o contêiner */
     display: flex;
-  justify-content: center;
+    justify-content: center;
+    margin-bottom: 0;
 
 }
 
 /* Contêiner de texto */
 .TextContainer {
-    height: 90%;
+    height: 100%;
     display: flex;
-    flex-direction: column; /* Para empilhar os itens */
-    align-items: center; /* Alinha os itens à esquerda */
-    width: 50%;
+    flex-direction: column;
+    /* Para empilhar os itens */
+    align-items: center;
+    /* Alinha os itens à esquerda */
+    width: 80%;
+    gap: 70px;
+    /* Espaçamento entre os itens */
+
 }
 
 /* Contêiner de cada item */
 .ItemContainer {
-    margin-bottom: 40px; /* Espaçamento entre os itens */
+
     display: flex;
     flex-direction: column;
-   text-align: center;
+    text-align: center;
 }
 
 /* Título */
 .Title {
-    font-family: var(--font-fira-sans-light); /* Usando a fonte definida */
+    font-family: var(--font-fira-sans-light);
+    /* Usando a fonte definida */
     font-weight: 275;
     font-size: 3rem;
     line-height: 74px;
-    color: var(--azul-médio); /* Cor do título usando a variável do root */
+    color: var(--azul-médio);
+    /* Cor do título usando a variável do root */
     margin-bottom: 30px;
 
-    
+
     /* Estilo para a linha sublinhando o título */
-    border-bottom: 10px solid var(--laranja); /* Ajuste a espessura conforme necessário */
-    padding-bottom: 1px; /* Adiciona um pouco de espaço entre o texto e a linha */
+    border-bottom: 10px solid var(--laranja);
+    /* Ajuste a espessura conforme necessário */
+    padding-bottom: 1px;
+    /* Adiciona um pouco de espaço entre o texto e a linha */
     margin-bottom: 35px;
 }
 
 /* Texto */
 .Text {
-    font-family: var(--font-fira-sans-regular); /* Usando a fonte definida */
+    font-family: var(--font-fira-sans-regular);
+    /* Usando a fonte definida */
     font-weight: 400;
     font-size: 2.5rem;
     line-height: 45px;
-    color: var(--azul-escuro); /* Cor do texto usando a variável do root */
+    color: var(--azul-escuro);
+    /* Cor do texto usando a variável do root */
+}
+
+
+@media (max-width: 1170px) {
+
+    .Title {
+
+        font-weight: 275;
+        font-size: 2.5rem;
+        line-height: 74px;
+        margin-bottom: 30px;
+        padding-bottom: 1px;
+        margin-bottom: 35px;
+    }
+
+    /* Texto */
+    .Text {
+
+        font-weight: 400;
+        font-size: 2.1rem;
+        line-height: 35px;
+
+    }
+
+
+}
+
+@media(max-width: 768px) {
+    .Text {
+        text-align: start;
+    }
+}
+
+@media (max-width: 732px) {
+    .Title {
+
+        font-weight: 275;
+        font-size: 2rem;
+        line-height: 74px;
+        margin-bottom: 30px;
+        padding-bottom: 1px;
+        margin-bottom: 35px;
+    }
+
+    /* Texto */
+    .Text {
+
+        font-weight: 400;
+        font-size: 1.5rem;
+        line-height: 35px;
+        text-align: start;
+    }
+}
+
+@media (max-width: 560px) {
+    .Title {
+
+        font-weight: 275;
+        font-size: 1.7rem;
+        line-height: 74px;
+        margin-bottom: 30px;
+        padding-bottom: 1px;
+        margin-bottom: 35px;
+    }
+
+    /* Texto */
+    .Text {
+
+        font-weight: 400;
+        font-size: 1.2rem;
+        line-height: 35px;
+        text-align: start;
+    }
+}
+
+@media(max-width: 495px) {
+
+    .TextContainer
+    {
+        width: 95%;
+    }
+
+    .Title {
+
+        font-weight: 275;
+        font-size: 1.8rem;
+        line-height: 74px;
+        margin-bottom: 30px;
+        padding-bottom: 1px;
+        margin-bottom: 35px;
+    }
+
+    /* Texto */
+    .Text {
+
+        font-weight: 400;
+        font-size: 0.98rem;
+        line-height: 30px;
+        text-align: center;
+    }
 }
