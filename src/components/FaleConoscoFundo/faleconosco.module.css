@@ -1,0 +1,66 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+
+}
+
+.faleConoscoFundoContainer
+{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: red;
+   top: 120px;
+    width: 100%;
+    height: 436px;
+    background: url('../../assets/FaleConoscoFundo.webp') no-repeat center center/cover;
+    padding: 0;
+}
+
+
+.TextContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 100%;
+    align-items: flex-start;
+    height: 300px;
+    bottom: 0;
+    background-color: rgba(0, 26, 60, 0.5); /* Mesma cor definida em 'azul-escuro' com opacidade */
+    padding: 50px;
+    
+}
+
+.Title
+{
+    width: 50%; /* Ajuste conforme necessário */
+    font-family: var(--font-fira-sans-extralight);
+    font-style: normal;
+    font-weight: 300;
+    font-size: 3.4rem;
+    line-height: 69px;
+    text-align: left;
+    color: var(--branco);
+    
+    /* Estilo para a linha sublinhando o título */
+    border-bottom: 10px solid var(--laranja);
+    margin-bottom: 50px;
+    margin-top: 20px;
+}
+
+.Text {
+    width: 80%; /* Ajuste conforme necessário */
+    font-family: var(--font-fira-sans-extralight);
+    font-style: normal;
+    font-weight: 300;
+    font-size: 3rem;
+    line-height: 69px;
+    text-align: left;
+    color: var(--branco);
+    margin-bottom: 30px;
+
+
+}
