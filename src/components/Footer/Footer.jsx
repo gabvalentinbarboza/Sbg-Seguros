@@ -7,6 +7,7 @@ import LinkedInIcon from '../../assets/LinkedInIcon.png';
 import Logo from '../../assets/Logo_SGB_Small.png';
 import PhoneIcon from '../../assets/PhoneIcon.png';
 import WhatsAppIcon from '../../assets/WhatsAppIcon.png';
+import InstagramIcon from '../../assets/InstagramIcon.png';
 
 function Footer() {
     return (
@@ -47,11 +48,15 @@ function Footer() {
                     </li>
                     <li className={Styles.navItem}>
                         <img src={PhoneIcon} alt="Telefone" className={Styles.icon} />
-                        <a href="tel:+5511982040163" className={Styles.Links}>Telefone</a>
+                        <a href="tel:113132-1142" className={Styles.Links}>Telefone</a>
                     </li>
                     <li className={Styles.navItem}>
                         <img src={EmailIcon} alt="E-mail" className={Styles.icon} />
                         <a href="mailto:simone.sabbag@sbgseguros.com.br" className={Styles.Links}>E-mail</a>
+                    </li>
+                    <li className={Styles.navItem}>
+                        <img src={InstagramIcon} alt="E-mail" className={Styles.icon} />
+                        <a href="https://www.instagram.com/sbg_seguros?igsh=NzRvZTR0Y3l2bHN5" className={Styles.Links}>Instagram</a>
                     </li>
                 </ul>
             </nav>

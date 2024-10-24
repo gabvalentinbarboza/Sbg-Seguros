@@ -17,7 +17,7 @@ function ModalNossosProdutos({ titulo, topicos, onClose }) {
                 </div>
 
                 <button className={Styles.closeButton} onClick={onClose}>
-                    <img src={CloseIcon} alt="Fechar" width="80px" height="80px" />
+                    <img src={CloseIcon} alt="Fechar" width="60px" height="60px" />
                 </button>
             </div>
         </div>
